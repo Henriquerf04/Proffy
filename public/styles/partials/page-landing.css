@@ -1,0 +1,141 @@
+#page-landing {
+    background: var(--color-primary);
+}
+
+#page-landing #container {
+    color: var(--color-text-in-primary);
+}
+
+.logo-container img {
+    height: 10rem;
+}
+
+.logo-container {
+    text-align: center; /* Alinha imagem e texto */
+    margin-bottom: 3.2rem;
+}
+
+.logo-container h2 {
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+    margin-top: 0.8rem;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center; /* precisa do display: flex pra funcionar */
+    margin: 3.2rem 0; /* 3.2rem vert 0 horiz */
+}
+
+.buttons-container a {
+    width: 30rem;
+    height: 10.4rem;
+
+    border-radius: 0.8rem; /* Arredondar as bordas da 'caixa', segue a lógica do margin/padding 1 a 4 índices */
+    margin-right: 1.6rem;
+
+    font: 700 2.4rem Archivo;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    transition: background 0.2s; /* tempo de transição de cor do background */
+
+    color: var(--color-button-text);
+
+}
+
+.buttons-container a img {
+    width: 4rem;
+    margin-right: 2.4rem;
+}
+
+.buttons-container a.study {
+    background: var(--color-primary-lighter);
+}
+
+.buttons-container a.study:hover { /* estado hover é quando passa o mouse por cima do elemento */
+    background: var(--color-primary-light);
+}
+
+.buttons-container a.give-classes {
+    background: var(--color-secondary);
+    margin-right: 0;
+}
+
+.buttons-container a.give-classes:hover { /* estado hover é quando passa o mouse por cima do elemento */
+    background: var(--color-secondary-dark);
+}
+
+.total-connections {
+    font-size: 1.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-connections img {
+    margin-left: 0.8rem;
+}
+
+@media (max-width: 1100px) {
+    :root {
+        font-size: 40%; /*modificar as medidas em rem */
+    }
+    .hero-image {
+        height: 45rem;
+    }
+}
+
+
+@media (min-width: 1100px) {
+    #page-landing #container {
+        max-width: 1100px; /* definiu que o tamanho será limitado a 1100px */
+        display: grid; /* dividir a tela em quadros */
+        grid-template-columns: 2fr 1fr 2fr; /* '25% 50% 25%'(divide entre frações) ou '1px 2px 3px' */
+        grid-template-rows: 350px 1fr;
+        grid-template-areas: 
+        "proffy image image"
+        "button button texting";
+        gap:60px;
+        /* column-gap: 87px;
+           row-gap: 86px;
+        */ 
+    }
+    .logo-container {
+        grid-area: proffy;
+        text-align: initial;
+        align-self: center;
+        margin: 0;
+    }
+
+    .logo-container img {
+        height: 127px;
+    }    
+
+    .hero-image {
+        grid-area: image;
+        height: 350px;
+    }
+    .buttons-container {
+        grid-area: button;
+        justify-content: flex-start; /* Alinha com o início do conteúdo flex */
+        margin: 0;
+    }
+    .total-connections {
+        grid-area: texting;
+        justify-self: end;
+        font-size: 1.2rem;
+    }
+
+}
+

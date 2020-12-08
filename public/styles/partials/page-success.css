@@ -1,0 +1,104 @@
+#page-success {
+    background: var(--color-primary);
+    text-align: center;
+    color: var(--color-text-in-primary);    
+}
+
+#page-success #full {
+    width: 1440px;
+    height: 820px;
+    position: relative;       
+}
+
+#full .back-image {
+    width: 1119.2px;
+    height: 561px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    margin: 122.82px 160.4px 136.18px;
+}
+
+#full .center-container {
+    width: 479px;
+    height: 414px;
+    margin: 203px 480.5px;
+    position: absolute;
+    top: 0;
+    left: 0;    
+    display: grid;
+    grid-template-rows: 120px 42px 26px 26px 80px 56px;
+    grid-template-areas: 
+    "check"
+    "cadastro"
+    "tudocerto"
+    "agora"
+    "vazio"
+    "botao";
+    gap: 0px;
+}
+
+.check-image {
+    grid-area: check;
+
+    width: 120px;
+    height: 120px;  
+    margin: 0;  
+    justify-self: center;    
+}
+
+.cadastro {
+    grid-area: cadastro;
+
+    font: 700 3.6rem Archivo;
+    color: var(--color-title-in-primary);
+
+    width: 406px;
+    height: 42px;
+    margin: 0;
+    justify-self: center;
+}
+
+.tudo-certo {
+    grid-area: tudocerto;
+    
+    color: var(--color-text-in-primary);
+    font: Archivo;
+
+    width: 479px;
+    height: 23px;
+    margin: 0;
+}
+
+.agora {
+    grid-area: agora;
+    
+    color: var(--color-text-in-primary);
+    
+    width: 479px;
+    height: 23px;
+    margin: 0;
+}
+
+.access-button {
+    grid-area: botao;
+
+    background: var(--color-secondary);
+    color: var(--color-text-in-primary);
+    font: 700 1.6rem Archivo;
+    transition: background 0.2s;
+
+    width: 176px;
+    height: 56px;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+ 
+}
+
+.access-button:hover { /* estado hover é quando passa o mouse por cima do elemento */
+    background: var(--color-secondary-dark);
+}
